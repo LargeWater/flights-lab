@@ -11,7 +11,17 @@ function create(req, res) {
 }
 
 function index(req, res) {
-
+  Flight.find({})
+  .then(flights => {
+    res.render('flights/index', {
+      title: 'All flights',
+      flights: flights
+    })
+  })
+  .catch(error => {
+    console.log(error)
+    res.redirect('/flights')
+  })
 }
 
 function show(req, res) {
