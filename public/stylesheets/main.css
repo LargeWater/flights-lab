@@ -76,6 +76,9 @@ nav > a.active {
   color: white;
 }
 
-.fas::before {
+/* .fas::before {
   font-family: "Font Awesome 5 Free";
+} */
+nav > i {
+  z-index: 9999;
 }
