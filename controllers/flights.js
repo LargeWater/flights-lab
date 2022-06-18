@@ -49,7 +49,17 @@ function show(req, res) {
 }
 
 function edit(req, res) {
-
+  Flight.findById(req.params.id)
+  .then(flight => {
+    res.render('flights/edit', {
+      flight,
+      title: 'Edit Flight'
+    })
+  })
+  .catch(error => {
+    console.log(error)
+    res.redirect('/flights')
+  })
 }
 
 function deleteFlight(req, res) {
