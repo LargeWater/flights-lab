@@ -49,7 +49,7 @@ body > nav {
   padding: 0 20px 0 30px;
 }
 
-nav > i {
+#nav-icon {
   width: 34px;
   object-fit: contain;
   margin-right: auto;
@@ -76,9 +76,9 @@ nav > a.active {
   color: white;
 }
 
-/* .fas::before {
+.fas::before {
   font-family: "Font Awesome 5 Free";
-} */
-nav > i {
-  z-index: 9999;
 }
+/* nav > i {
+  z-index: 9999;
+} */
