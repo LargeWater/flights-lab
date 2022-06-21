@@ -12,6 +12,8 @@
         <th>Airport</th>
         <th>Flight #</th>
         <th>Departure date</th>
+        <th>Seat</th>
+        <th>Price</th>
       </tr>
     </thead>
     <tbody id="list">
@@ -28,6 +30,12 @@
           <td><%= flight.airport %></td>
           <td><a href="/flights/<%= flight._id%>"><%= flight.flightNo %></a></td>
           <td><%= flight.departs %></td>
+          <!-- <tbody> -->
+            <% flight.tickets.forEach(ticket => { %>
+                <td><%= ticket.seat %></td>
+                <td>$<%= ticket.price %></td>
+            <% }) %>
+          <!-- </tbody> -->
         </tr>
       <% }) %>
     </tbody>

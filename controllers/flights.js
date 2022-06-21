@@ -118,4 +118,5 @@ export {
   edit,
   deleteFlight as delete,
   update,
+  createTicket,
 }

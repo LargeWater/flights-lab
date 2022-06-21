@@ -25,6 +25,10 @@
     <input type="text" name="flightNo" id="flight-number-input" value="<%= flight.flightNo %>">
     <label for="date-input">Departure date: </label>
     <input type="datetime-local" name="departs" value="<%= flight.departs %>" id="date-input">
+    <label for="seat-input">Seat:</label>
+    <input type='text' name="seat" required pattern="[A-F][1-9]\d?" id='seat-input' value="<%= flight.tickets %>">
+    <label for="price-input">Price:</label>
+    <input type='text' name="price" id='price-input'>
     <button type="submit">Save Flight</button>
   </form>
 </main>
