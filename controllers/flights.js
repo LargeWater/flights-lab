@@ -90,8 +90,25 @@ function update(req, res) {
     console.log(error)
     res.redirect('/flights')
   })
+  for (let key in req.body) {
+    if (req.body[key] === '') delete req.body[key]
+  }
 }
 
+function createTicket(req, res) {
+  Flight.findById(req.params.id)
+  .then(flight => {
+    flight.tickets.push(req.body)
+    flight.save()
+    .then(() => {
+      res.redirect(`/flights/${flight._id}`)
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/")
+  })
+}
 
 export {
   newFlight as new,
