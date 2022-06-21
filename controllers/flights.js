@@ -15,13 +15,20 @@ function index(req, res) {
 }
 
 function newFlight(req, res) {
+  const newFlight = new Flight()
+  const defaultDate = newFlight.departs
+  const formattedDate = defaultDate.toISOString().slice(0,16)
   res.render('flights/new', {
     title: "Add Flight",
+    formattedDate
   })
 }
 
 function create(req, res) {
   console.log(req.body)
+  for (let key in req.body) {
+    if (req.body[key] === '') delete req.body[key]
+  }
   Flight.create(req.body)
   .then(flight => {
     console.log(flight)
