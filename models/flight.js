@@ -37,7 +37,10 @@ const flightSchema = new Schema({
       return today.toISOString().slice(0,16)
     },
   },
+  meals: [{type: Schema.Types.ObjectId, ref: 'Meal'}],
   tickets: [ticketSchema],
+}, {
+  timestamps: true,
 })
 
 const Flight = mongoose.model('Flight', flightSchema)
