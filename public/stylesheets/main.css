@@ -1,21 +1,19 @@
 html {
-  box-sizing: border-box
+  /* box-sizing: border-box; */
+  background-color: #F2F5EA;
 }
-
 
 *, 
 *::before, 
 *::after { 
   box-sizing: inherit;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-  Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-family: 'League Spartan', sans-serif;
 }
 
 body {
   background-color: #F2F5EA;
-
   margin: 0;
-  color: #424748;
+  color: #3f413f;
   min-height: 100vh;
   display: grid;
   grid-template-rows: 50px 1fr;
@@ -23,24 +21,28 @@ body {
     "nav"
     "main";
   font-size: 18px;
+  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
 }
+
 
 body > main {
   grid-area: main;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #e8eceb;
+  /* background-color: #e8eceb; */
   padding: 20px;
+  background-image: linear-gradient(45deg, #cbebfa 0%, #e8eceb 100%);
 }
 
 body > main h1:first-child {
   margin-bottom: 50px;
+  font-weight: 400;
 }
 
 body > nav {
   grid-area: nav;
-  background-color: #b8c0c2;
+  background-color: #424748;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -51,36 +53,31 @@ body > nav {
   width: 40px;
   object-fit: contain;
   margin-right: auto;
+  color: #7494EA;
 }
 
-#nav-icon:hover {
-  color: #494e4f;
-}
 
 nav > a {
   margin: 20px;
   text-decoration: none;
   padding: 10px;
   border-radius: 5px;
-  color: #424748;
+  color: #7494EA;
 }
 
 nav > a:visited {
-  color: #424748;
+  color: #7494EA;
 }
 
 nav > a:hover {
-  color: white;
-  background-color: #424748;
+  color: #F2F5EA;
+  background-color: #7494EA;
 }
 
 nav > a.active {
-  color: white;
+  color: #F2F5EA;
 }
 
 .fas::before {
   font-family: "Font Awesome 5 Free";
 }
-/* nav > i {
-  z-index: 9999;
-} */
