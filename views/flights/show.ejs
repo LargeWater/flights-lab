@@ -13,7 +13,7 @@
     <h3>Airport: <%= flight.airport %></h3>
     <h3>Flight number: <%= flight.flightNo %></h3>
     <h3>Departs: <%= flight.departs %></h3>
-    <div>Meals:</div>
+    <div id="meals">Meals:</div>
     <ul>
       <% flight.meals.forEach(meal => { %>
         <li><%= meal.name %></li>
