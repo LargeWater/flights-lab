@@ -24,12 +24,9 @@ table td {
   padding: 4px;
   text-decoration: none;
   font-size: 18px;
-  color: #7494EA;
-}
-
-#list a:visited{
   color: #424748;
 }
+
 
 #list a:hover {
   background-color: #7494EA;

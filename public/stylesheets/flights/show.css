@@ -31,9 +31,6 @@ button {
   color: #424748;
 }
 
-#list a:visited{
-  color: #424748;
-}
 
 button:hover {
   background-color: #7494EA;

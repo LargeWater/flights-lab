@@ -56,22 +56,6 @@ body > nav {
   color: #7494EA;
 }
 
-/* #nav-icon-hover {
-  width: 40px;
-  object-fit: contain;
-  margin-right: auto;
-  color: #7494EA;
-  display: none;
-}
-
-#nav-icon:hover {
-  display: none;
-}
-
-#nav-icon-hover:hover{
-  display: contents;
-} */
-
 nav > a {
   margin: 20px;
   text-decoration: none;
